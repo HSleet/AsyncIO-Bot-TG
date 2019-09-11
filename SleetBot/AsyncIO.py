@@ -5,12 +5,13 @@ It echoes any incoming text messages.
 
 import logging
 import requests
+import os
 import re
 from bs4 import BeautifulSoup as BSoup
-from Spotify_API import search_song
+from SleetBot.Spotify_API import search_song
 from aiogram import Bot, Dispatcher, executor, types
 
-API_TOKEN = '882749314:AAEhgNloAL7daFRmnNxIr0haWWhpZT5AYH8'
+API_TOKEN = os.environ['TGBOT_TOKEN']
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
