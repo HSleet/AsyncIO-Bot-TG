@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db985c2a-1744-41ec-b3c4-3dc58bbb7c75" name="Default Changelist" comment="PyPI Packaging files">
+    <list default="true" id="db985c2a-1744-41ec-b3c4-3dc58bbb7c75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568245811996</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added Requirements text">
+      <created>1568246624847</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568246624848</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +131,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="PyPI Packaging files" />
-    <option name="LAST_COMMIT_MESSAGE" value="PyPI Packaging files" />
+    <MESSAGE value="Added Requirements text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Requirements text" />
   </component>
 </project>
