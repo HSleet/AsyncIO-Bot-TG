@@ -10,16 +10,21 @@ import re
 from bs4 import BeautifulSoup as BSoup
 from SleetBot.Spotify_API import search_song
 from aiogram import Bot, Dispatcher, executor, types
+import sys
 
-API_TOKEN = os.environ['TGBOT_TOKEN']
+
+
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger()
 
 # Initialize bot and dispatcher
+API_TOKEN = os.getenv('TGBOT_TOKEN')
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
+mode = os.getenv('MODE')
 
 def get_dog_url():
     contents = requests.get('https://random.dog/woof.json').json()
@@ -142,5 +147,25 @@ async def echo(message: types.Message):
     # await bot.send_message(message.chat.id, message.text)
     await message.reply(message.text, reply=False)
 
+if mode == 'dev':
+    def run():
+        executor.start_polling(dp, skip_updates=True)
+
+elif mode == "prod":
+    def run(updater):
+        PORT = int(os.environ.get("PORT", "8443"))
+        HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME")
+        # Code from https://github.com/python-telegram-bot/python-telegram-bot/wiki/Webhooks#heroku
+        updater.start_webhook(listen="0.0.0.0",
+                              port=PORT,
+                              url_path=API_TOKEN)
+        Bot.set_webhook(url="https://{}.herokuapp.com/{}".format(HEROKU_APP_NAME, API_TOKEN))
+else:
+    logger.error("No MODE specified!")
+    sys.exit(1)
+
 if __name__ == '__main__':
-    executor.start_polling(dp, skip_updates=True)
+    logger.info("Starting bot")
+    run()
+# if __name__ == '__main__':
+#     executor.start_polling(dp, skip_updates=True)

@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="db985c2a-1744-41ec-b3c4-3dc58bbb7c75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SleetBot/AsyncIO.py" beforeDir="false" afterPath="$PROJECT_DIR$/SleetBot/AsyncIO.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SleetBot/Spotify_API.py" beforeDir="false" afterPath="$PROJECT_DIR$/SleetBot/Spotify_API.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +55,7 @@
         <env name="TGBOT_TOKEN" value="882749314:AAEhgNloAL7daFRmnNxIr0haWWhpZT5AYH8" />
         <env name="SPOTIFY_CLIENT_ID" value="18904a10f36d4caab0255142811c6512" />
         <env name="SPOTIFY_CLIENT_SECRET" value="b8f27db6052842ea8b558d3b22e3faf4" />
+        <env name="MODE" value="dev" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -115,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568246624848</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Requirements text">
+      <created>1568248317164</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1568248317164</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,7 +132,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
