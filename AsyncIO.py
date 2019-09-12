@@ -10,10 +10,6 @@ import re
 from bs4 import BeautifulSoup as BSoup
 from Spotify_API import search_song
 from aiogram import Bot, Dispatcher, executor, types
-import sys
-
-
-
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
