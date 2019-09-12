@@ -55,12 +55,11 @@ def get_youtube_vid(name):
 
 def get_definition(word, lang):
     if lang.lower() == 'en':
-        definition_url = 'https://www.wordreference.com/definition/'
+        definition_url = 'https://www.wordreference.com/definition/' + str(word)
     elif lang.lower() == 'es':
-        definition_url = 'https://www.wordreference.com/definicion/'
+        definition_url = 'https://www.wordreference.com/definicion/' + str(word)
     else:
         return ['Please provide a valid language']
-    definition_url = definition_url + word
     content = requests.get(definition_url)
     soup = BSoup(content.text, 'html.parser')
     def_result = soup.find_all('ol')
