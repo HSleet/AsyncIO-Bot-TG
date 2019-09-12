@@ -8,7 +8,7 @@ import requests
 import os
 import re
 from bs4 import BeautifulSoup as BSoup
-from SleetBot.Spotify_API import search_song
+from Spotify_API import search_song
 from aiogram import Bot, Dispatcher, executor, types
 import sys
 
@@ -156,9 +156,9 @@ elif mode == "prod":
         PORT = int(os.environ.get("PORT", "8443"))
         HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME")
         # Code from https://github.com/python-telegram-bot/python-telegram-bot/wiki/Webhooks#heroku
-        updater.start_webhook(listen="0.0.0.0",
-                              port=PORT,
-                              url_path=API_TOKEN)
+        # updater.start_webhook(listen="0.0.0.0",
+        #                       port=PORT,
+        #                       url_path=API_TOKEN)
         Bot.set_webhook(url="https://{}.herokuapp.com/{}".format(HEROKU_APP_NAME, API_TOKEN))
 else:
     logger.error("No MODE specified!")
