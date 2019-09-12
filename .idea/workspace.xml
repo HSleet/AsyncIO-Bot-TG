@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db985c2a-1744-41ec-b3c4-3dc58bbb7c75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+    <list default="true" id="db985c2a-1744-41ec-b3c4-3dc58bbb7c75" name="Default Changelist" comment="PyPI Packaging files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AsyncIO.py" beforeDir="false" afterPath="$PROJECT_DIR$/SleetBot/AsyncIO.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spotify_API.py" beforeDir="false" afterPath="$PROJECT_DIR$/SleetBot/Spotify_API.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,9 +50,9 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="TGBOT_TOKEN" value="'882749314:AAEhgNloAL7daFRmnNxIr0haWWhpZT5AYH8'" />
-        <env name="SPOTIFY_CLIENT_ID" value="'18904a10f36d4caab0255142811c6512'" />
-        <env name="SPOTIFY_CLIENT_SECRET" value="'b8f27db6052842ea8b558d3b22e3faf4'" />
+        <env name="TGBOT_TOKEN" value="882749314:AAEhgNloAL7daFRmnNxIr0haWWhpZT5AYH8" />
+        <env name="SPOTIFY_CLIENT_ID" value="18904a10f36d4caab0255142811c6512" />
+        <env name="SPOTIFY_CLIENT_SECRET" value="b8f27db6052842ea8b558d3b22e3faf4" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -92,6 +86,28 @@
       <option name="presentableId" value="Default" />
       <updated>1567574592926</updated>
     </task>
+    <task id="LOCAL-00001" summary="PyPI Packaging files">
+      <created>1568245630086</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568245630087</updated>
+    </task>
+    <task id="LOCAL-00002" summary="PyPI Packaging files">
+      <created>1568245752380</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568245752380</updated>
+    </task>
+    <task id="LOCAL-00003" summary="PyPI Packaging files">
+      <created>1568245811996</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1568245811996</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,5 +120,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="PyPI Packaging files" />
+    <option name="LAST_COMMIT_MESSAGE" value="PyPI Packaging files" />
   </component>
 </project>
