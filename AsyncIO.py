@@ -147,6 +147,5 @@ async def echo(message: types.Message):
     # await bot.send_message(message.chat.id, message.text)
     await message.reply(message.text, reply=False)
 
-
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
