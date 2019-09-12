@@ -147,26 +147,6 @@ async def echo(message: types.Message):
     # await bot.send_message(message.chat.id, message.text)
     await message.reply(message.text, reply=False)
 
-# if mode == 'dev':
-#     def run():
-#         executor.start_polling(dp, skip_updates=True)
-#
-# elif mode == "prod":
-#     def run():
-#         PORT = int(os.environ.get("PORT", "8443"))
-#         HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME")
-#         # Code from https://github.com/python-telegram-bot/python-telegram-bot/wiki/Webhooks#heroku
-#         # updater.start_webhook(listen="0.0.0.0",
-#         #                       port=PORT,
-#         #                       url_path=API_TOKEN)
-#         Bot.set_webhook(url="https://{}.herokuapp.com/{}".format(HEROKU_APP_NAME, API_TOKEN))
-#         executor.start_polling(dp, skip_updates=True)
-# else:
-#     logger.error("No MODE specified!")
-#     sys.exit(1)
-#
-# if __name__ == '__main__':
-#     logger.info("Starting bot")
-#     run()
+
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
