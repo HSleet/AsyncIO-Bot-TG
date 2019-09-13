@@ -80,7 +80,7 @@ def get_definition(word, lang):
     else:
         return ['Word not found']
 
-types.chat.markdown.
+
 @dp.message_handler(commands=['cat', 'puss'])
 async def cats(message: types.Message):
     url = get_cat_url()

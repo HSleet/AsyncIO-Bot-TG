@@ -4,6 +4,7 @@
     <list default="true" id="db985c2a-1744-41ec-b3c4-3dc58bbb7c75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AsyncIO.py" beforeDir="false" afterPath="$PROJECT_DIR$/AsyncIO.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime.txt" beforeDir="false" afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -236,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568327294235</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="define command and echo removed">
+      <created>1568333244870</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1568333244870</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -257,6 +265,7 @@
     <MESSAGE value="Added Requirements text" />
     <MESSAGE value="Heroku Changes" />
     <MESSAGE value="define command fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="define command fix" />
+    <MESSAGE value="define command and echo removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="define command and echo removed" />
   </component>
 </project>
