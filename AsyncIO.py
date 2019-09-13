@@ -80,21 +80,9 @@ def get_definition(word, lang):
     else:
         return ['Word not found']
 
-
+types.chat.markdown.
 @dp.message_handler(commands=['cat', 'puss'])
 async def cats(message: types.Message):
-    # with open('cats.jpg', 'rb') as photo:
-    #     '''
-    #     # Old fashioned way:
-    #     await bot.send_photo(
-    #         message.chat.id,
-    #         photo,
-    #         caption='Cats are here 😺',
-    #         reply_to_message_id=message.message_id,
-    #     )
-    #     '''
-    #
-    #     await message.reply_photo(photo, caption='Cats are here 😺')
     url = get_cat_url()
     if 'gif' in url:
         await message.reply_animation(animation=url)
@@ -122,25 +110,20 @@ async def spotify(message: types.Message):
         result = result + str(item[1]) + '\n' + str(item[0]) + '\n' + str(item[-1]) + '\n\n'
     await message.reply(song_info[0][-1])
 
-@dp.message_handler(commands=['define'])
-async def define(message: types.Message):
-    def_query = message.get_args()
-    all_args = def_query.split(' ')
-    def_word = all_args[0]
-    lang = all_args[-1]
-    definitions = get_definition(def_word, lang)
-    await message.reply('\n'.join(definitions))
+# @dp.message_handler(commands=['define'])
+# async def define(message: types.Message):
+#     def_query = message.get_args()
+#     all_args = def_query.split(' ')
+#     def_word = all_args[0]
+#     lang = all_args[-1]
+#     definitions = get_definition(def_word, lang)
+#     await message.reply('\n'.join(definitions))
 
 @dp.message_handler(commands=['youtube'])
 async def youtube(message: types.Message):
     search = message.get_full_command()[-1]
     video_url = get_youtube_vid(search)
     await message.reply(video_url)
-
-async def echo(message: types.Message):
-    # old style:
-    # await bot.send_message(message.chat.id, message.text)
-    await message.reply(message.text, reply=False)
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
