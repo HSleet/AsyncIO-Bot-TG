@@ -1,4 +1,5 @@
 import spotipy
+import pprint
 from spotipy.oauth2 import SpotifyClientCredentials
 import os
 
@@ -11,14 +12,17 @@ sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 
 def search_song(search_info):
-    song_info = sp.search(search_info, limit=7)['tracks']
-    song = {}
+    song_info = sp.search(search_info, limit=5, type='track', market='DO')['tracks']
+    preview = []
     song_list = []
     for item in song_info['items']:
-        if item['type'] == 'track':
-            song.update({item['name']: item['external_urls']['spotify']})
-            song_list.append([item['artists'][0]['name'], item['name'], item['external_urls']['spotify']])
-    return song_list, song
+        song_name = item['name']
+        song_url = item['external_urls']['spotify']
+        song = {'name': song_name, 'url': song_url}
+        artist = list(map(lambda a: {'name': a['name'], 'url' : a['external_urls']['spotify']}, item['artists']))
+        song_list.append({'song': song, 'artists': artist, })
+        preview.append(item['preview_url'])
+    return song_list, preview
 
 #
 # songs_found, songs = search_song(input('song name       '))

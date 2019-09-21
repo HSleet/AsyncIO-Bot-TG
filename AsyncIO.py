@@ -5,6 +5,7 @@ It echoes any incoming text messages.
 
 import logging
 import requests
+import pprint
 import os
 import re
 from bs4 import BeautifulSoup as BSoup
@@ -21,6 +22,7 @@ bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
 mode = os.getenv('MODE')
+
 
 def get_dog_url():
     contents = requests.get('https://random.dog/woof.json').json()
@@ -91,6 +93,7 @@ async def cats(message: types.Message):
     else:
         await message.reply_photo(photo=url)
 
+
 @dp.message_handler(commands=['dog'])
 async def dogs(message: types.Message):
     url = get_dog_url()
@@ -101,14 +104,22 @@ async def dogs(message: types.Message):
     else:
         await message.reply_photo(photo=url)
 
+
 @dp.message_handler(commands=['spotify'])
 async def spotify(message: types.Message):
+    chatid = message.chat.id
     search = message.get_full_command()[-1]
-    song_info, song_key = search_song(search)
-    result = ''
-    for item in song_info:
-        result = result + str(item[1]) + '\n' + str(item[0]) + '\n' + str(item[-1]) + '\n\n'
-    await message.reply(song_info[0][-1])
+    song_info, preview = search_song(search)
+    pprint.pprint(song_info)
+    item = song_info[0]
+    md_song = f"[{item['song']['name']}]({item['song']['url']})"
+    artists = []
+    for artist in item['artists']:
+        md_artist = f"[{artist['name']}]({artist['url']})"
+        artists.append(md_artist)
+    md_artists = ', '.join(artists)
+    result = md_song + ' by ' + md_artists
+    await bot.send_message(chatid, result, parse_mode='Markdown',)
 
 # @dp.message_handler(commands=['define'])
 # async def define(message: types.Message):
@@ -119,11 +130,13 @@ async def spotify(message: types.Message):
 #     definitions = get_definition(def_word, lang)
 #     await message.reply('\n'.join(definitions))
 
+
 @dp.message_handler(commands=['youtube'])
 async def youtube(message: types.Message):
     search = message.get_full_command()[-1]
-    video_url = get_youtube_vid(search)
+    video_url, name = get_youtube_vid(search)
     await message.reply(video_url)
+
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
